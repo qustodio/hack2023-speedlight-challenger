@@ -1,0 +1,4 @@
+flask
+flask-restful
+flake8
+black
