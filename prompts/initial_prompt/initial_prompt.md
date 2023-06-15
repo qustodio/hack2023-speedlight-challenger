@@ -1,4 +1,4 @@
-# Generate mathematical challenges for the user using AI
+# Generate aboiler plate mathematical challenges for the user using AI
 
 ## Overview
 Challenger is a web-application with a client side that ask for a prompt that reads a text inputted by the user and it is sent to chat-gpt, the response should be shown in a modal
