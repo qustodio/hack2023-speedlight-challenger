@@ -11,6 +11,16 @@ Challenger is a web-application with a client side that ask for a prompt that re
 - The chat gpt response should be shown in any readable way
 - The response element should have a button to store the text into a local json file like artifact storage
 
+## Files 
+
+- index.html
+- index.css
+- tsconfig.json
+- package.json
+- webpack.config.js
+- index.ts
+- dist/index.js (imported by index.html and generated with webpack)
+
 ## Technology Stack
 - Back-end: None
 - Fron-End: HTML, CSS, TypeScript
