@@ -2,15 +2,12 @@
 from flask import Flask, request
 from flask_restful import Api, Resource
 
+from .endpoints.math_challenge import MathChallenge
+
 app = Flask(__name__)
 api = Api(app)
 
-class MathChallenge(Resource):
-    def post(self):
-        """Receive a math challenge in natural language and return the solution."""
-        challenge = request.form['challenge']
-        # Use a math parsing library to interpret the challenge and solve it
-        solution = solve_math_challenge(challenge)
-        return {'solution': solution}
+post_endpoints = [MathChallenge]
 
-api.add_resource(MathChallenge, '/math-challenge')
+for endpoint in post_endpoints:
+    api.add_resource(endpoint, f'/{endpoint.__name__.lower()}', methods=['POST'])

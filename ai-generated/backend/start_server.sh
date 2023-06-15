@@ -1,0 +1,3 @@
+export PYTHONPATH=$PYTHONPATH:$(pwd)
+export CHATGPT_API_KEY='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'
+flask run

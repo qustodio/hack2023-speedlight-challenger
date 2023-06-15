@@ -1,5 +1,5 @@
 start:  # Start the server
-	flask run
+	./start_server.sh
 
 test:  # Run unit tests
 	python -m unittest
