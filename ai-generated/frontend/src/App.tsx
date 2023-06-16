@@ -12,7 +12,7 @@ const App: React.FC = () => {
   const dispatch = useDispatch();
   const challenge = useSelector((state: RootState) => state.challenge.challenge);
 
-  const handleSubmit = (prompt: string, difficulty: number) => {
+  const handleSubmit = (prompt: string, difficulty: string) => {
     dispatch(getChallenge(prompt, difficulty));
     setShowChallenge(true);
   };

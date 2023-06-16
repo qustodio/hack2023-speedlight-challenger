@@ -17,7 +17,7 @@ export enum ActionTypes {
     type: ActionTypes.GET_CHALLENGE;
     payload: {
       prompt: string;
-      difficulty: number;
+      difficulty: string;
     };
   }
   
@@ -35,7 +35,7 @@ export enum ActionTypes {
     type: ActionTypes.CLEAR_CHALLENGE,
   });
   
-  export const getChallenge = (prompt: string, difficulty: number): GetChallengeAction => ({
+  export const getChallenge = (prompt: string, difficulty: string): GetChallengeAction => ({
     type: ActionTypes.GET_CHALLENGE,
     payload: {
       prompt,

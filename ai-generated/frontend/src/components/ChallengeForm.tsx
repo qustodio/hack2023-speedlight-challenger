@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 interface ChallengeFormProps {
-  onSubmit: (prompt: string, difficulty: number) => void;
+  onSubmit: (prompt: string, difficulty: string) => void;
 }
 
 const ChallengeForm: React.FC<ChallengeFormProps> = ({ onSubmit }) => {
@@ -11,7 +11,7 @@ const ChallengeForm: React.FC<ChallengeFormProps> = ({ onSubmit }) => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (prompt && difficulty) {
-      onSubmit(prompt, parseInt(difficulty));
+      onSubmit(prompt, difficulty);
     }
   };
 
@@ -33,11 +33,11 @@ const ChallengeForm: React.FC<ChallengeFormProps> = ({ onSubmit }) => {
         onChange={(e) => setDifficulty(e.target.value)}
       >
         <option value="">Select Difficulty</option>
-        <option value="1">Easy</option>
-        <option value="2">Medium</option>
-        <option value="3">Hard</option>
-        <option value="4">Expert</option>
-        <option value="5">Master</option>
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+        <option value="expert">Expert</option>
+        <option value="master">Master</option>
       </select>
 
       <button type="submit">Get Challenge</button>

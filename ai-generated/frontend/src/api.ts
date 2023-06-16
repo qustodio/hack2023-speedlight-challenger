@@ -2,8 +2,8 @@ import { catchError, of } from 'rxjs';
 import { ajax } from 'rxjs/ajax';
 
 interface ChallengeRequest {
-  prompt: string;
-  difficulty: number;
+  challenge: string;
+  difficulty: string;
 }
 
 export interface Response {
@@ -27,7 +27,7 @@ const fakeResponse: FakeAjaxResponse = {
 const API_URL = import.meta.env.VITE_API_URL;
 
 export const getChallengeApi = (requestData: ChallengeRequest) =>
-  ajax.post<Response>(`${API_URL}/math_challenge`, requestData)
+  ajax.post<Response>(`${API_URL}/mathchallenge`, requestData)
     .pipe(
       catchError(() => of(fakeResponse))
     );

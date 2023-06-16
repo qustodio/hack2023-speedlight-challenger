@@ -11,7 +11,7 @@ const getChallengeEpic: ChallengeEpic = (action$, _state$, _dependencies) =>
     ofType(ActionTypes.GET_CHALLENGE),
     switchMap((action: GetChallengeAction) => {
         return getChallengeApi({
-          prompt: action.payload.prompt,
+          challenge: action.payload.prompt,
           difficulty: action.payload.difficulty,
         })
         .pipe(
