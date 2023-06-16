@@ -1,0 +1,16 @@
+{
+  "name": "integration_test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "test_math_challenger.js",
+  "scripts": {
+    "test": "mocha test_math_challenger.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "assert": "^2.0.0",
+    "axios": "^0.21.1",
+    "mocha": "^10.2.0"
+  }
+}
