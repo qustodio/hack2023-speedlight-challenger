@@ -15,8 +15,9 @@ class MathChallenge(Resource):
     def post(self):
         """Receive a math challenge and return the solution from ChatGPT."""
         challenge = request.get_json()['challenge']
+        difficulty = request.get_json()['difficulty']
         challenge = challenge[:250]
-        challenge += 'Answer in less than 50 characters'
+        challenge = self.configure_prompt(challenge, difficulty)
         openai.api_key = CHAT_GPT_API_KEY
         chat_completion = openai.ChatCompletion.create(
             model="gpt-3.5-turbo",
@@ -31,4 +32,5 @@ class MathChallenge(Resource):
         if difficulty not in DIFFICULTY_PROMPTS:
             difficulty = 'easy'
         intial_prompt = DIFFICULTY_PROMPTS[difficulty] + challenge
+        final_prompt = intial_prompt + '. Ignore the solution. Answer in no more than 50 characters.'
         
