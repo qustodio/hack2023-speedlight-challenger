@@ -1,11 +1,13 @@
 # app.py
 from flask import Flask, request
 from flask_restful import Api, Resource
+from flask_cors import CORS
 
 from .endpoints.math_challenge import MathChallenge
 
 app = Flask(__name__)
 api = Api(app)
+CORS(api, resources={r"/*": {"origins": "*"}})
 
 post_endpoints = [MathChallenge]
 
