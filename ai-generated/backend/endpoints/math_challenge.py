@@ -32,5 +32,5 @@ class MathChallenge(Resource):
         if difficulty not in DIFFICULTY_PROMPTS:
             difficulty = 'easy'
         intial_prompt = DIFFICULTY_PROMPTS[difficulty] + challenge
-        final_prompt = intial_prompt + '. Ignore the solution. Answer in no more than 50 characters.'
-        
+        final_prompt = intial_prompt + '. Don\t show the solution. Answer in no more than 50 characters.'
+        return final_prompt

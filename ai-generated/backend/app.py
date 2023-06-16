@@ -7,7 +7,7 @@ from .endpoints.math_challenge import MathChallenge
 
 app = Flask(__name__)
 api = Api(app)
-CORS(api, resources={r"/*": {"origins": "*"}})
+CORS(app, origins='*')
 
 post_endpoints = [MathChallenge]
 

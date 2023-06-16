@@ -16,7 +16,7 @@ const getChallengeEpic: ChallengeEpic = (action$, _state$, _dependencies) =>
         })
         .pipe(
           map((request) => {
-            return setChallenge(request.response.data.problem)
+            return setChallenge(request.response.problem)
           })
         )
 

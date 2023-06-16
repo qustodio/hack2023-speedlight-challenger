@@ -7,9 +7,7 @@ interface ChallengeRequest {
 }
 
 export interface Response {
-    data: {
-      problem: string;
-    }
+  problem: string;
 }
 
 interface FakeAjaxResponse {
@@ -18,9 +16,7 @@ interface FakeAjaxResponse {
 
 const fakeResponse: FakeAjaxResponse = {
   response: {
-    data: {
-      problem: "Solve the following equation: 2x + 5 = 13. Find the value of 'x' that satisfies the equation. Show all your steps and calculations."
-  }
+    problem: "Solve the following equation: 2x + 5 = 13. Find the value of 'x' that satisfies the equation. Show all your steps and calculations."
   }
 };
 

@@ -19,3 +19,7 @@ Send back the chat-gpt response to chat gpt to find an answer to the problem.
 Retrieve and parse the answer.
 send back the answer in a new attribute in the response
 Make sure that the answers from gpt are character limited to no more than 70 characters
+
+
+
+An equation with at least 2 terms
