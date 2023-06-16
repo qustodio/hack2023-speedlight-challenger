@@ -8,3 +8,14 @@ What should I do to create an endpoint that receives a text and send it back to 
 Develop a new endpoint to receive a mathematical challenge as natural language, add the files.
 
 I want this project to follow a ddd architecture, addapt app.py to follow theese principles and create the needed files
+
+Could we add the endpoints of the package in a single line?
+
+How can I test this endpoint using curl
+
+Extend the mathematical challenge problem to do the following after retrieving chat-gpt response
+
+Send back the chat-gpt response to chat gpt to find an answer to the problem.
+Retrieve and parse the answer.
+send back the answer in a new attribute in the response
+Make sure that the answers from gpt are character limited to no more than 70 characters
